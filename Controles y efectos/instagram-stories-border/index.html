@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>instagram stories border</title>
+    <style>
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-image: url('./yo.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+
+        }
+
+        .avatar::after {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            content: '';
+            background-color: red;
+            z-index: -1;
+            transform: scale(1.1);
+            background: conic-gradient(#feda75, #fa7e1e, #d62976, #962db5, #4f5bdf, #feda75);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="avatar"></div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="./conic-gradient.js"></script>
+</body>
+
+</html>

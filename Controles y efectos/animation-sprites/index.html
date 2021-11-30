@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animacion sprites </title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .fireworks {
+            width: 150px;
+            /*importante dimesion del fotograma, si es mas grande se debe escalar*/
+            height: 150px;
+            background-image: url('./fireworks.png');
+            background-size: 9600%;
+            /*cantidad de fotogramas *100 + % */
+            background-position: left;
+            animation: move;
+            animation-duration: 1s;
+            animation-timing-function: steps(95);
+            /*cantidad de fotogramas menos 1 */
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes move {
+            from {
+                background-position: left;
+            }
+
+            from {
+                background-position: right;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fireworks"></div>
+</body>
+
+</html>

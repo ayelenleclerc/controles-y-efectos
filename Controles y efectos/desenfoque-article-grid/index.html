@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenfoque y Grid</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-column-gap: 1em;
+        }
+
+        .container:hover .option {
+            filter: blur(2px)
+        }
+
+        .container .option {
+            transform: scale(1);
+            transition: all 0.3s ease-in;
+        }
+
+        .container .option:hover {
+            filter: blur(0px);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <article class="option">
+            <h3>Hola</h3>
+            <p> alguna cosa que quieras poner, generalmente informacion a destacar dentro de este espacio, puede ser
+                largo o puede ser corto, podria ser cualquier cosa.</p>
+        </article>
+        <article class="option">
+            <h3>Hola</h3>
+            <p> alguna cosa que quieras poner, generalmente informacion a destacar dentro de este espacio, puede ser
+                largo o
+                puede ser corto, podria ser cualquier cosa.</p>
+        </article>
+        <article class="option">
+            <h3>Hola</h3>
+            <p> alguna cosa que quieras poner, generalmente informacion a destacar dentro de este espacio, puede ser
+                largo o
+                puede ser corto, podria ser cualquier cosa.</p>
+        </article>
+        <article class="option">
+            <h3>Hola</h3>
+            <p> alguna cosa que quieras poner, generalmente informacion a destacar dentro de este espacio, puede ser
+                largo o
+                puede ser corto, podria ser cualquier cosa.</p>
+        </article>
+
+    </div>
+</body>
+
+</html>
